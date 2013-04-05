@@ -3,6 +3,7 @@ GEM
   specs:
     ffi (1.6.0)
     listen (0.7.3)
+    pg (0.15.0)
     puma (1.6.3)
       rack (~> 1.2)
     rack (1.5.2)
@@ -31,6 +32,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  pg
   puma
   rack-test
   rb-inotify (~> 0.9)

@@ -13,7 +13,7 @@ class ApplicationController < Sinatra::Base
     enable :method_override, :sessions
     set :session_secret, SecureRandom.hex
 
-    DB = Sequel.connect(ENV['DATABASE_URL'] || 'postgres://root:root@localhost:5432/mini-crm')
+    DB = Sequel.connect(ENV['HEROKU_POSTGRESQL_RED_URL'] || 'postgres://root:root@localhost:5432/mini-crm')
 
 
     register Sinatra::Flash

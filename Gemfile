@@ -11,6 +11,11 @@ group :development do
   gem "rerun"
 end
 
+group :production do
+  # gems specifically for Heroku go here
+  gem "pg"
+end
+
 gem "rack-test", require: "rack/test", group: :test
 
 

@@ -1,12 +1,7 @@
-# require 'rubygems'
-# require 'sinatra'
-# require 'slim'
-# require 'sinatra/reloader' if development?
-
 class ContactController < ApplicationController
 
 
-    register Sinatra::Flash
+  register Sinatra::Flash
 
   get '/list' do
     contacts = DB[:contact].all.map { |contact| Contact.new(contact) }
