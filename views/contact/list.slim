@@ -1,0 +1,22 @@
+h1 Listado de contactos
+
+- if flash[:notice]
+ .alert.alert-block
+  button.close type="button" data-dismiss="alert" &times;
+  h4 ¡Atención!
+  p =flash[:notice]
+- if contacts
+  table.table-stripped.table-bordered.table.table-hover
+    thead
+      tr
+        th Nombre Completo
+        th Correo Electrónico
+        th Teléfono
+    tbody
+    - for contact in contacts do
+      tr
+        td
+          a href="show/#{contact.id}" = contact.full_name
+        td = contact.email
+        td = contact.phone_number
+</div>

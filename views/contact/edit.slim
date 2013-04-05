@@ -1,0 +1,28 @@
+h1 Editar contacto
+
+form.form-horizontal method="POST" action="/contact/update/#{contact.id}"
+  input type="hidden" name="_method" value="PUT"
+
+  div.control-group
+    label.control-label for="full_name" Nombre completo
+    div.controls
+      input type="text" id="full_name" name="contact[full_name]" placeholder="Nombre completo" value="#{contact.full_name}"
+
+  div.control-group
+    label.control-label for="address" Dirección
+    div.controls
+      input type="text" id="address" name="contact[address]" placeholder="Dirección" value="#{contact.address}"
+
+  div.control-group
+    label.control-label for="email" Correo electrónico
+    div.controls
+      input type="text" id="email" name="contact[email]" placeholder="Correo electrónico" value="#{contact.email}"
+
+  div.control-group
+    label.control-label for="phone_number" Número de teléfono
+    div.controls
+      input type="text" id="phone_number" name="contact[phone_number]" placeholder="Número de teléfono" value="#{contact.phone_number}"
+
+  div.control-group
+    div.controls
+      button.btn type="submit" Actualizar

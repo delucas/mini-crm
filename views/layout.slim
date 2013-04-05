@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    title mini-crm
+    link rel="stylesheet" media="screen, projection" href="/css/bootstrap.min.css"
+    link rel="stylesheet" media="screen, projection" href="/css/bootstrap-responsive.min.css"
+    link rel="stylesheet" media="screen, projection" href="/css/mini-crm.css"
+  body
+
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+        .container
+          a.brand href="/" mini-crm
+          form.navbar-search.pull-right
+            input.search-query type="text" placeholder="Buscar"
+
+    div.container
+
+      div.row
+        div.span3
+          div.well.sidebar-nav
+            ul.nav.nav-list
+              li.nav-header Contactos
+              li
+                a href="/contact/list" Listado
+              li
+                a href="/contact/new" Nuevo
+
+        div.span9
+          == yield
+
+    script src="/js/jquery-1.9.1.min.js"
+    script src="/js/bootstrap.min.js"

@@ -1,0 +1,16 @@
+article.well
+  h1 =contact.full_name
+  dl
+    dt Dirección
+    dd =contact.address
+    dt Correo electrónico
+    dd =contact.email
+    dt Teléfono
+    dd =contact.phone_number
+
+form action="/contact/delete/#{contact.id}" method="POST"
+  div.form-actions
+    input type="hidden" name="_method" value="DELETE"
+    a.btn href="/contact/edit/#{contact.id}" Actualizar
+    | &nbsp;
+    input.btn.btn-danger type="submit" value="Eliminar" onclick="return confirm('¿Está seguro de que desea eliminar el contacto?')"
